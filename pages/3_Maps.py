@@ -109,7 +109,7 @@ with col1:
     map = folium.Map(location=[46, 1], zoom_start=6)
     heat_data = [[row['Latitude'], row['Longitude']] for _, row in filtered_data.iterrows() if pd.notna(row['Latitude']) and pd.notna(row['Longitude'])]
     if heat_data:
-        HeatMap(heat_data).add_to(map)
+        HeatMap(heat_data, radius=18).add_to(map)
     st_folium.st_folium(map, width=700, height=700)  
 
 with col2:
@@ -122,5 +122,5 @@ with col2:
     map = folium.Map(location=[46, 1], zoom_start=6)
     heat_data = [[row['Latitude'], row['Longitude']] for _, row in filtered_data.iterrows() if pd.notna(row['Latitude']) and pd.notna(row['Longitude'])]
     if heat_data:
-        HeatMap(heat_data).add_to(map)
+        HeatMap(heat_data, radius=18).add_to(map)
     st_folium.st_folium(map, width=700, height=700)  

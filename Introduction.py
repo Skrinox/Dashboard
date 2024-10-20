@@ -25,6 +25,8 @@ def load_data(link, sep=";"):
         if lat and lon:
             data.at[idx, 'Latitude'] = lat
             data.at[idx, 'Longitude'] = lon
+    
+    st.balloons()
     return data
 
 def load_data_once():
