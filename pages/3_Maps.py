@@ -25,7 +25,7 @@ max_date = data['Date de première alerte'].max()
 min_date = pd.to_datetime(min_date)
 max_date = pd.to_datetime(max_date)
 
-selected_dates = st.date_input("Sélectionnez une plage de dates", [min_date, min_date], min_value=min_date, max_value=max_date)
+selected_dates = st.date_input("Select a date range:", [min_date, min_date], min_value=min_date, max_value=max_date)
 
 col1, col2, col3 = st.columns([2, 1, 2], vertical_alignment="center")
 
@@ -50,19 +50,17 @@ if len(selected_dates) == 2:
     with col2:
         st.markdown("### Global Insights")
         
-        # Nombre total d'incendies filtrés
         total_fires = len(filtered_data)
         st.metric(label="Total Fires", value=total_fires)
         
-        # Exemple d'autres indicateurs (si disponibles dans les données)
         total_area = filtered_data['Surface parcourue (m2)'].sum()
         avg_area = total_area / total_fires if total_fires > 0 else 0
+
         st.metric(label="Total Burned Area (ha)", value=total_area)
         st.metric(label="Average Burned Area (ha)", value=avg_area.__round__(2))
-        # En km² 5 438,3638 ha (≅ 54,38 km2)
+
         st.metric(label="Total Burned Area (km²)", value=total_area / 100 if total_fires > 0 else 0)
         
-        # Indicateur sur les communes touchées
         total_communes = filtered_data['Nom de la commune'].nunique()
         st.metric(label="Unique Communes Affected", value=total_communes)
 
@@ -82,7 +80,7 @@ if len(selected_dates) == 2:
                 fig_surface = px.pie(surface_data, values=surface_data.values, names=surface_data.index, title="Types de surface brûlée")
                 st.plotly_chart(fig_surface) 
 else:
-    st.warning("Veuillez sélectionner une plage de deux dates.")
+    st.warning("Please select a valid date range.")
 
 st.markdown("---")
 
@@ -95,7 +93,7 @@ with col1:
     start_date = datetime.date(2022, 1, 1)
     end_date = datetime.date(2023, 12, 31)
     selected_month = st.slider(
-        "Sélectionnez un mois et une année pour afficher les incendies :",
+        "Select a month and a year to display fires :",
         min_value=start_date,
         max_value=end_date,
         value=datetime.date(2022, 1, 1),
@@ -114,7 +112,7 @@ with col1:
 
 with col2:
 
-    annee_selectionnee = st.selectbox("Sélectionnez une année pour afficher les incendies :", pd.to_datetime(data['Date de première alerte']).dt.year.unique())
+    annee_selectionnee = st.selectbox("Select a year :", pd.to_datetime(data['Date de première alerte']).dt.year.unique())
 
     filtered_data = data[
         (pd.to_datetime(data['Date de première alerte']).dt.year == annee_selectionnee)

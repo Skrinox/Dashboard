@@ -51,13 +51,13 @@ with col2:
 
     photo_side.markdown(" As a 2nd year engineering student (M1) at Efrei. I'm enthusiastic about actively contributing to a dynamic team and applying my skills and knowledge to new challenges. Curious, I regularly inform myself about technological advances and what they can bring to our daily lives. As a sportsman, I've taken part in various activities including indoor soccer, English boxing and CrossFit, which enable me to develop not only my physical fitness, but also the skills of discipline, perseverance and teamwork. At the same time, I am an avid fan of video games, particularly sandbox games, platformers and team-based FPSs.")
 
-with st.expander("My Academic Projects"):
+with st.expander("My Academic Projects :notebook_with_decorative_cover:"):
     st.markdown("#### **Explain - AI patent data classification -** ***July 2024***")
     st.markdown("Programming language : Python - Group of 5 students")
     st.markdown("BERT and FastText AI models for patent classification using the classification system: Cooperative Patent Classification (CPC)")
     st.markdown("Explanation of prediction in graphical and highlighted text form with SHAP (for BERT) and Lime (for FastText).")
 
-with st.expander("My experiences"):
+with st.expander("My experiences :pencil:"):
     st.markdown("#### **Suez International - Internship -** ***June 2022***")
     st.markdown(" - Archiving documents in the database to update technical documentation.")
     st.markdown(" - Training a colleague in English on how to use the archiving software.")
@@ -65,7 +65,7 @@ with st.expander("My experiences"):
     st.markdown("#### **Efrei Paris- Internship -** ***January 2021 to March 2023***")
     st.markdown(" - Prospecting and promoting the school via phone and direct contact with parents, students, and instructors.")
 
-with st.expander("My Skills"):
+with st.expander("My Skills :dart:"):
     st.markdown("#### **Programming languages**")
     st.markdown(" - Python, SQL, Java")
     st.markdown("#### **Libraries and frameworks**")
@@ -75,7 +75,7 @@ with st.expander("My Skills"):
     st.markdown("#### **Languages**")
     st.markdown(" - French (native), English (fluent), Spanish (intermediate)")
 
-with st.expander("Education"):
+with st.expander("Education :mortar_board:"):
     st.markdown("#### **Efrei Paris - Engineering School -** ***2021 to 2026***")
     st.markdown(" - 2nd year master engineering student (M1) at Efrei Paris. My specialisation is Data & AI.")
     st.markdown(" ---")
@@ -84,6 +84,6 @@ with st.expander("Education"):
     st.markdown(" ---")
     st.markdown("#### High School: Baccalaureate specialty **Mathematics and Physics-Chemistry** / **options** : expert maths and Chinese - ***2018 to 2021***")
 
-with st.expander("My Hobbies"):
+with st.expander("My Hobbies :man-surfing:"):
     st.markdown(" - **Sport** : Indoor soccer, Boxing, CrossFit")
     st.markdown(" - **Video games** : Sandbox games, platformers and team-based FPSs")

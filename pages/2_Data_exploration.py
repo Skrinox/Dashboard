@@ -26,7 +26,7 @@ st.markdown("The south of France is the most affected by forest fires. They have
 
 st.markdown("### Number of fires over the year")
 
-annee_selectionnee = st.selectbox("Sélectionnez une année pour afficher les incendies :", pd.to_datetime(data['Date de première alerte']).dt.year.unique())
+annee_selectionnee = st.selectbox("Select a year:", pd.to_datetime(data['Date de première alerte']).dt.year.unique())
 
 filtered_data = data[
     (pd.to_datetime(data['Date de première alerte']).dt.year == annee_selectionnee)
