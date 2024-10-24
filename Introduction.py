@@ -50,7 +50,7 @@ def get_coordinates_from_insee(code_insee):
 def sidebar_info():    
 
     st.sidebar.markdown("# **ABOUT ME**")
-    st.sidebar.image("img\photoCV.png", use_column_width=True)
+    st.sidebar.image("img/photoCV.png", use_column_width=True)
     
     st.sidebar.markdown("**Name :** Virgle Martel")
     st.sidebar.markdown("**Contact :** virgile.martel@efrei.net")

@@ -38,7 +38,7 @@ def calculer_age(timestamp_naissance, timestamp_actuel):
 col1, col2 = st.columns([1, 3], vertical_alignment="center")
 
 with col1:
-    st.image("img\photoCV.png", width=300)
+    st.image("img/photoCV.png", width=300)
 
 with col2:
     st_autorefresh(1000)
