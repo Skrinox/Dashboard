@@ -5,3 +5,4 @@ plotly
 folium
 pandas
 numpy
+streamlit_autorefresh
